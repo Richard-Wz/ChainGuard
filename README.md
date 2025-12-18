@@ -64,7 +64,7 @@ Replace `<ip>` with your server IP to access these services:
 
 ## License
 
-This project is licensed under the ISC License.
+This project is licensed under the MIT License.
 
 ## Acknowledgments
 
