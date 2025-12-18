@@ -1,0 +1,347 @@
+/* Reset and base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f0f2f5, #e6e9f0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Login container styling */
+.login-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    min-height: 570px;
+    padding: 40px 32px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+/* Brand logo styling */
+.brand-logo {
+    background-color: #1a73e8;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    margin: 0 auto 16px;
+}
+
+/* Headings and subtext */
+.login-container h1 {
+    margin-bottom: 8px;
+    font-size: 28px;
+    color: #333;
+}
+
+.login-container p {
+    margin-bottom: 32px;
+    font-size: 16px;
+    color: #666;
+}
+
+/* Form elements styling */
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #1a73e8;
+    box-shadow: 0 0 8px rgba(26, 115, 232, 0.2);
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #1a73e8;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #1666c1;
+    transform: translateY(-2px);
+}
+
+/* Register link styling */
+.register-link {
+    margin-top: 16px;
+    font-size: 14px;
+    color: #666;
+}
+
+.register-link a {
+    text-decoration: none;
+    color: #1a73e8;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+    color: #1056c7;
+}
+
+.reset-password {
+    margin-top: 4px;
+    font-size: 14px;
+    color: #666;
+}
+
+.reset-password a {
+    text-decoration: none;
+    color: #1a73e8;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.reset-password a:hover {
+    color: #1056c7;
+}
+
+/* Error message styling */
+.error-container {
+    min-height: 18px;
+    margin-top: 8px;
+}
+
+p.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #e74c3c;
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsive Styles */
+/* Large tablets and small desktops */
+@media screen and (max-width: 1024px) {
+    .login-container {
+        max-width: 400px;
+    }
+}
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    .login-container {
+        max-width: 380px;
+        padding: 35px 28px;
+        min-height: auto;
+    }
+    
+    .login-container h1 {
+        font-size: 26px;
+    }
+    
+    .brand-logo {
+        width: 55px;
+        height: 55px;
+        font-size: 32px;
+    }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+        align-items: center;
+    }
+    
+    .login-container {
+        max-width: 100%;
+        width: 100%;
+        padding: 30px 24px;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+    
+    .login-container h1 {
+        font-size: 24px;
+        margin-bottom: 6px;
+    }
+    
+    .login-container p {
+        font-size: 15px;
+        margin-bottom: 28px;
+    }
+    
+    .brand-logo {
+        width: 50px;
+        height: 50px;
+        font-size: 28px;
+        margin-bottom: 14px;
+    }
+    
+    .form-group {
+        margin-bottom: 18px;
+    }
+    
+    label {
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+    
+    input[type="text"],
+    input[type="password"] {
+        padding: 12px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    button {
+        padding: 12px;
+        font-size: 15px;
+        margin-top: 14px;
+    }
+    
+    .register-link,
+    .reset-password {
+        font-size: 13px;
+    }
+    
+    p.error {
+        font-size: 13px;
+    }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 320px) {
+    .login-container {
+        padding: 25px 20px;
+    }
+    
+    .login-container h1 {
+        font-size: 22px;
+    }
+    
+    .login-container p {
+        font-size: 14px;
+    }
+    
+    .brand-logo {
+        width: 45px;
+        height: 45px;
+        font-size: 24px;
+    }
+    
+    input[type="text"],
+    input[type="password"] {
+        padding: 10px;
+    }
+    
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+    body {
+        padding: 10px;
+        align-items: center;
+    }
+    
+    .login-container {
+        min-height: auto;
+        padding: 20px 24px;
+    }
+    
+    .login-container h1 {
+        font-size: 22px;
+        margin-bottom: 4px;
+    }
+    
+    .login-container p {
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+    
+    .brand-logo {
+        width: 45px;
+        height: 45px;
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    button {
+        margin-top: 12px;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    button:hover {
+        transform: none; /* Disable hover transform on touch devices */
+    }
+    
+    button:active {
+        background-color: #1056c7;
+        transform: scale(0.98);
+    }
+    
+    .register-link a:hover,
+    .reset-password a:hover {
+        color: #1a73e8; /* Reset hover colors on touch devices */
+    }
+}

@@ -1,0 +1,868 @@
+/* Default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #e5ebe7;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Design */
+/* Sidebar Start */
+.sidebar {
+    width: 240px;
+    background: #FFFFFF;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px 0px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 30px;
+    color: #2baf60;
+    font-weight: bold;
+    font-size:24px;
+}
+
+.brand-logo {
+    background-color: #2baf60;
+    color: #FFFFFF;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    color: #5f6368;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 16px;
+}
+
+.menu-item.active {
+    color: #2baf60;
+    background-color: #e5ebe7;
+    border-left: 3px solid #2baf60;
+}
+
+.menu-item:hover:not(.active) {
+    background-color: #f5f5f5;
+    border-left: 3px solid #5f6368;
+}
+
+.menu-item a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    width: 100%;
+    color: inherit;
+    text-decoration: none;
+    font-style: normal;
+}
+
+.menu-icon {
+    margin-right: 15px;
+    width: 20px;
+    text-align: center;
+}
+/* Sidebar End */
+
+/* Main Content */
+/* Main Content Start */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #FFFFFF;  
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.page-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #202124;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #dadce0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5f6368;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hamburger-menu {
+    cursor: pointer;
+    display: none;
+}
+
+.dashboard-container {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.dashboard-header {
+    color: #202124;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    margin-left: 6px;
+}
+
+.export-btn {
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.export-btn {
+    background-color: transparent;
+    border: 1px solid #dadce0;
+    color: #5f6368;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.export-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Stats Cards Styling */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-title-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.stat-title {
+    font-size: 14px;
+    color: #5f6368;
+    margin-bottom: 5px;
+}
+
+.stat-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.stat-value {
+    font-size: 28px;
+    font-weight: 600;
+    color: #202124;
+    margin-right: 14px;
+}
+
+.stat-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.stat-icon.violation {
+    color: #e53935;
+}
+
+.stat-icon.fine {
+    color: #4caf50;
+}
+
+.stat-icon.appeal {
+    color: #ff9800;
+}
+
+.stat-icon.user {
+    color: #2196f3;
+}
+
+.stat-empty {
+    font-size: 0.75rem;
+    color: #888;
+    margin-top: 3px;
+}
+
+.empty-chart-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    color: #888;
+}
+
+.empty-chart-message i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    opacity: 0.5;
+}
+
+.empty-chart-message p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Charts Styling */
+.charts-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 30px;
+    max-width: 100%;
+    width: 100%;
+}
+
+.chart-card {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.chart-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* For the Daily Activity Chart */
+.chart-card:nth-child(3) {
+    grid-column: 1 / -1;
+}
+
+.chart-card:nth-child(3) .chart-content {
+    height: 200px;
+}
+
+.chart-header {
+    margin-bottom: 15px;
+}
+
+.chart-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #202124;
+}
+
+.chart-content {
+    height: 200px;
+    position: relative;
+    flex-grow: 1;
+}
+
+.chart-header-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.year-selector {
+    margin-left: 15px;
+}
+
+.year-selector select {
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #dadce0;
+    background-color: #fff;
+    color: #5f6368;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.year-selector select:focus {
+    outline: none;
+    border-color: #2baf60;
+}
+
+.month-selector {
+    margin-left: 15px;
+}
+
+.month-selector select {
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #dadce0;
+    background-color: #fff;
+    color: #5f6368;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.month-selector select:focus {
+    outline: none;
+    border-color: #2baf60;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1200px) {
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .stat-card {
+        padding: 20px;
+    }
+
+    .charts-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .chart-card:nth-child(3) {
+        grid-column: auto; 
+    }
+    
+    .chart-card {
+        height: auto;
+    }
+    
+    .chart-content {
+        height: 250px; 
+    }
+    
+    .chart-header-title {
+        flex-direction: column;
+        align-items: center; 
+        width: 100%; 
+        text-align: center;
+    }
+    
+    .chart-header h3,
+    .chart-header-title h3.monthly-trend-title {
+        text-align: center;
+        width: 100%; 
+    }
+
+    .year-selector {
+        margin-left: 0;
+        margin-top: 8px;
+        width: 100%;
+    }
+    
+    .year-selector select {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .month-selector {
+        margin-left: 0;
+        margin-top: 8px;
+        width: 100%;
+    }
+    
+    .month-selector select {
+        width: 100%;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        left: -240px;
+        top: 0;
+        height: 100%;
+        z-index: 1000;
+        transition: left 0.3s;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .page-title {
+        font-size: 18px;
+    }
+    
+    .action-buttons {
+        display: none;
+    }
+
+    .user-avatar {
+        width: 24px;
+        height: 24px;
+        font-size: 14px;
+    }
+
+    .hamburger-menu {
+        display: block;
+        margin-right: 15px;
+    }
+    
+    .stats-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .stat-card {
+        padding: 18px;
+    }
+    
+    .stat-value {
+        font-size: 24px;
+    }
+    
+    .stat-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .stat-card {
+        padding: 15px;
+    }
+    
+    .stat-value {
+        font-size: 20px;
+    }
+    
+    .stat-title {
+        font-size: 12px;
+    }
+    
+    .stat-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+    
+    .stat-empty {
+        font-size: 12px;
+    }
+    
+    .dashboard-container {
+        padding: 15px;
+    }
+
+    .chart-content {
+        height: 250px; 
+    }
+    
+    .chart-header h3,
+    .chart-header-title h3.monthly-trend-title {
+        font-size: 16px;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    
+    .chart-card canvas {
+        width: 100% !important;
+    }
+
+    .year-selector {
+        width: 100%;
+        text-align: center;
+    }
+
+    .chart-card .chart-header {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .stat-card {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px;
+    }
+    
+    .stat-icon {
+        margin-bottom: 0;
+        align-self: center;
+    }
+    
+    .stat-content {
+        width: auto;
+        max-width: 70%;
+    }
+    
+    .stat-details {
+        width: auto;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .stat-value {
+        margin-right: 0;
+        font-size: 18px;
+    }
+    
+    .stat-title {
+        font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+    }
+    
+    .stats-container {
+        gap: 12px;
+    }
+    
+    .stat-empty {
+        font-size: 10px;
+        margin-left: 10px;
+    }
+}
+
+/* Print button styling */
+.print-btn {
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #2baf60;
+    border: 1px solid #2baf60;
+    color: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.print-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media print {
+    @page {
+        size: portrait;
+        margin: 1.5cm;
+    }
+    
+    body {
+        background-color: #ffffff !important;
+        color: #333 !important;
+        font-family: 'Segoe UI', Arial, sans-serif !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+    
+    /* Hide elements that shouldn't be printed */
+    .hamburger-menu,
+    .header-actions,
+    .header,
+    .sidebar,
+    .export-btn,
+    .print-btn,
+    .no-print {
+        display: none !important;
+    }
+    
+    /* Main content container */
+    .main-content {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .dashboard-container {
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+    }
+    
+    /* Report header styling */
+    .dashboard-container::before {
+        content: 'ChainGuard Traffic Violation Report';
+        display: block;
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 5px;
+        color: #2baf60;
+        border-bottom: 2px solid #2baf60;
+        padding-bottom: 10px;
+    }
+    
+    /* Add organization name */
+    .dashboard-container::after {
+        content: 'Report generated: ' attr(data-print-date) '\A Traffic Authority ID: ' attr(data-admin-id);
+        white-space: pre-wrap;
+        display: block;
+        font-size: 12px;
+        text-align: center;
+        margin-top: 30px;
+        font-style: italic;
+        color: #666;
+        border-top: 1px solid #ddd;
+        padding-top: 15px;
+    }
+    
+    /* Stats cards section */
+    .stats-container {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important;
+        margin: 40px 0 30px 0 !important;
+    }
+    
+    .stat-card {
+        break-inside: avoid !important;
+        margin-bottom: 10px !important;
+        padding: 20px !important;
+        border: 1px solid #ddd !important;
+        border-radius: 8px !important;
+        box-shadow: none !important;
+        background-color: #f9f9f9 !important;
+    }
+    
+    .stat-title {
+        font-size: 14px !important;
+        color: #666 !important;
+        font-weight: 600 !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .stat-value {
+        font-size: 24px !important;
+        font-weight: bold !important;
+        color: #2baf60 !important;
+    }
+    
+    .stat-icon {
+        color: #2baf60 !important;
+    }
+    
+    /* Chart container styling */
+    .charts-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 40px !important;
+        margin-top: 30px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .chart-card {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        margin-bottom: 30px !important;
+        border: 1px solid #ddd !important;
+        border-radius: 8px !important;
+        padding: 20px !important;
+        background-color: #f9f9f9 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .chart-header {
+        margin-bottom: 15px !important;
+        width: 100% !important;
+    }
+    
+    .chart-header h3 {
+        text-align: center !important;
+        font-size: 18px !important;
+        color: #333 !important;
+        margin-bottom: 15px !important;
+        border-bottom: 1px solid #ddd !important;
+        padding-bottom: 10px !important;
+    }
+    
+    .chart-content {
+        height: 300px !important;
+        width: 100% !important;
+        margin-bottom: 20px !important;
+        page-break-inside: avoid !important;
+    }
+
+    .chart-content canvas {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        display: block !important;
+    }
+
+    /* Year selector in print view */
+    .year-selector {
+        text-align: center !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .year-selector::before {
+        content: 'Year: ' !important;
+        font-weight: bold !important;
+    }
+    
+    /* Print footer with page numbers */
+    .dashboard-container::after {
+        content: 'ChainGuard Report - Page ' counter(page) ' of ' counter(pages) '\A Generated on: ' attr(data-print-date);
+        white-space: pre-wrap;
+        display: block;
+        text-align: center;
+        font-size: 10px;
+        color: #666;
+        margin-top: 30px;
+        border-top: 1px solid #ddd;
+        padding-top: 10px;
+    }
+    
+    /* QR code for report verification */
+    .print-qr-code {
+        display: block !important;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .print-qr-code img {
+        width: 100px !important;
+        height: 100px !important;
+    }
+    
+    .print-qr-code-text {
+        font-size: 10px;
+        color: #666;
+        margin-top: 5px;
+    }
+    
+    /* Empty chart messages in print */
+    .empty-chart-message {
+        border: 1px dashed #ddd !important;
+        padding: 40px !important;
+        text-align: center !important;
+        color: #999 !important;
+    }
+    
+    .empty-chart-message i {
+        font-size: 30px !important;
+        margin-bottom: 15px !important;
+        color: #ccc !important;
+    }
+    
+    /* Add logo to the report header */
+    .print-header-logo {
+        display: flex !important;
+        justify-content: center !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .print-header-logo img {
+        height: 60px !important;
+    }
+}
+
+/* Make sure charts print well even on narrow paper */
+@media print and (max-width: 480px) {
+    .stats-container {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .chart-content {
+        height: 250px !important;
+    }
+}
+/* Main Content End */
